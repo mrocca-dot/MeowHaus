@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeowHaus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img id="imagenlogo" src="imagenes/logo.png" alt="Logo de MeowHaus">
+    
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <h1>Bienvenidos a MeowHaus</h1>
+
+            <div class="inicio-contenido">
+                <img src="imagenes/portada.png" alt="Imagen de portada" width="250">
+                <p>
+                  En MeowHaus creemos que cada gato merece lo mejor. Por eso ofrecemos una selección especial de productos pensados para su bienestar: juguetes, camas, rascadores, alimento y accesorios únicos. Amamos a los gatos tanto como vos, y queremos que encuentres todo lo que tu michi necesita en un solo lugar.
+                </p>
+            </div>
+            <video width="400" controls class="video-inicio">
+                <source src="video/meowhaus.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </section>
+
+        <section id="productos">
+            <h2>Productos</h2>
+            <div class="productos-container">
+                <div class="card">
+                    <img class="imagencard" src="imagenes/comida.jpg" alt="Producto 1">
+                    <h3>Comida</h3>
+                    <p>Tenemos muchas opciones de diferentes alimentos para tu gatito.</p>
+                </div>
+                <div class="card">
+                    <img class="imagencard" src="imagenes/juguetes.jpg" alt="Producto 2">
+                    <h3>Juguetes</h3>
+                    <p>Gran variedad de juguetes para que tumichi se entretenga.</p>
+                </div>
+                <div class="card">
+                    <img class="imagencard" src="imagenes/rascadores.jpg" alt="Producto 3">
+                    <h3>Rascadores</h3>
+                    <p>Los mejores rascadores para tu gato.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reseñas">
+            <h2>Reseñas</h2>
+            <div class="reseñas-grid">
+                <div class="reseña">"Los super recomiendo me han atendido genial." "⭐⭐⭐⭐</div>
+                <div class="reseña">"Sin dudas los mejores productos para mis hijitos de cuatro patas" ⭐⭐⭐⭐⭐</div>
+                <div class="reseña">"Me gusto mucho el ambiente." ⭐⭐⭐⭐</div>
+                <div class="reseña">"Excelente calidad que mantiene la relación con los precios" ⭐⭐⭐⭐⭐</div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="form-contacto" action="https://formspree.io/f/xyznpeyl" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="gracias" style="display:none;">¡Gracias! Tu mensaje fue enviado correctamente.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('form-contacto');
+        const gracias = document.getElementById('gracias');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    gracias.style.display = 'block';
+                } else {
+                    alert("Ups! Algo salió mal. Intenta nuevamente.");
+                }
+            }).catch(error => {
+                alert("Error al enviar. Intenta más tarde.");
+            });
+        });
+    </script>
+</body>
+</html>
