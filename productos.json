@@ -3,28 +3,29 @@
         "id": 1,
         "nombre": "Comida Premium",
         "precio": 5500,
-        "imagen": "imagenes/comida.jpg",
+        "imagen": "comida.jpg",
         "descripcion": "Alimento balanceado premium para gatos adultos."
     },
     {
         "id": 2,
         "nombre": "Juguete Ratón",
         "precio": 2300,
-        "imagen": "imagenes/juguetes.jpg",
+        "imagen": "juguetes.jpg",
         "descripcion": "Ratón de tela con sonido para estimular el juego."
     },
     {
         "id": 3,
         "nombre": "Hierba",
         "precio": 8200,
-        "imagen": "imagenes/hierba.jpg",
+        "imagen": "hierba.jpg",
         "descripcion": "Bandejas con hierba especial para tu gato."
     },
     {
         "id": 4,
         "nombre": "Rascador Compacto",
         "precio": 12000,
-        "imagen": "imagenes/rascadores.jpg",
+        "imagen": "rascadores.jpg",
         "descripcion": "Rascador resistente para uñas sanas y muebles felices."
     }
+
 ]
