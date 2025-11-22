@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Comida Premium",
         "precio": 5500,
-        "imagen": "imagenes/comida.jpg",
+        "imagen": "comida.jpg",
         "descripcion": "Alimento balanceado premium para gatos adultos."
     },
     {
@@ -29,5 +29,6 @@
     }
 
 ]
+
 
 
