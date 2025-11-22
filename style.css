@@ -15,6 +15,9 @@ h1 {font-size: 50px;}
 h2 {
     background-color: #2a5134;
 }
+.textoprincipal{
+    font-size: 30px;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -355,5 +358,6 @@ footer {
     color: #326b42;
     padding: 20px;
 }
+
 
 
